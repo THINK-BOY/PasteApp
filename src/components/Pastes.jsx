@@ -35,12 +35,15 @@ const Pastes = () => {
               (paste) => {
                 return (
                   <div className='border rounded-2xl border-indigo-600' key={paste?._id}>
-                    <div>
+                    <div className='justify-items-start m-2'>
+                      <div className='font-bold text-lg m-2'>
                       {paste.title}
                     </div>
-                    <div>
+                    <div className='m-2 font-serif'>
                       {paste.content}
                     </div>
+                    </div>
+                    
                     <div className='flex flex-row gap-4 place-content-evely m-2'>
                       <button>
                         <Link to={`/?pasteId=${paste?._id}`}>Edit</Link>
@@ -57,11 +60,12 @@ const Pastes = () => {
                       }}>  
                         Copy
                       </button>
-                     {/* shre button can be added */}
-                    </div>
-                    <div>
+                     {/* <share button can be added */}
+                     <div className='justify-items-end m-2'>
                       {paste.createdAt}
                     </div>
+                    </div>
+                    
                   </div>
                 )
               }
